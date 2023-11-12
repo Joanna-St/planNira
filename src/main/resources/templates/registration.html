@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Registration</title>
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/registration.css" />
+</head>
+<body>
+    <!-- Navbar (Include your header or Thymeleaf fragment here) -->
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <section class="registration">
+        <div class="registration-content">
+            <h2>Create Your PlanNira Account</h2>
+            <form th:action="@{/register}" method="post" th:object="${user}">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" th:field="*{firstName}" required>
+                    <span class="error" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Error message</span>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" th:field="*{lastName}" required>
+                    <span class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Error message</span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" th:field="*{email}" required>
+                    <span class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Error message</span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" th:field="*{password}" required>
+                    <span class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Error message</span>
+                </div>
+                <div class="form-group">
+                    <label for="repeatPassword">Repeat Password</label>
+                    <input type="password" id="repeatPassword" name="repeatPassword" th:field="*{repeatPassword}" required>
+                    <span class="error" th:if="${#fields.hasErrors('repeatPassword')}" th:errors="*{repeatPassword}">Error message</span>
+                </div>
+                <div class="form-group">
+                    <label for="team">Team</label>
+                    <select id="team" name="team" th:field="*{team}" required>
+                        <option value="">--Select team--</option>
+                        <option value="projectManagement">Project Management</option>
+                        <option value="dataProcessing">Data Processing</option>
+                        <option value="scripting">Scripting</option>
+                        <option value="research">Research</option>
+                        <option value="qa">QA</option>
+                    </select>
+                    <span class="error" th:if="${#fields.hasErrors('team')}" th:errors="*{team}">Error message</span>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Project Details</title>
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/project-details.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Detailed Project Info Card -->
+        <div class="card project-details-card">
+            <h3>Project Name</h3>
+            <div class="client-section">
+                <h4>Client</h4>
+                <div class="client-info">
+                    <img src="https://via.placeholder.com/100" alt="Client Logo" class="client-logo">
+                    <span class="client-name">Client X</span>
+                </div>
+            </div>
+            <div class="project-type-section">
+                <h4>Project Type</h4>
+                <div class="hashtags">
+                    <span class="hashtag">Software-Development</span>
+                    <span class="hashtag">Marketing-Campaign</span>
+                    <!-- Add more hashtags as needed -->
+                </div>
+            </div>
+            <div class="status-section">
+                <h4>Project Status</h4>
+                <div class="status-item complete">Complete</div>
+                <div class="status-item on-hold">On Hold</div>
+                <div class="status-item not-started">Not Started</div>
+                <!-- Add more status items as needed -->
+            </div>
+            <div class="lead-section">
+                <h4>Project Lead</h4>
+                <p>John Doe</p>
+            </div>
+            <div class="details-section">
+                <h4>Project Details</h4>
+                <p>Project Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...</p>
+            </div>
+            <div class="dates-section">
+                <h4>Project Dates</h4>
+                <p><strong>Start Date:</strong> January 1, 2023</p>
+                <p><strong>End Date:</strong> December 31, 2023</p>
+            </div>
+            <div class="tasks-section">
+                <h4>Project Tasks</h4>
+                <table class="tasks-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Task Name</th>
+                            <th>Assignee</th>
+                            <th>Status</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">T001</a></td>
+                            <td>Task 1</td>
+                            <td>John Doe</td>
+                            <td>Completed</td>
+                            <td>January 15, 2023</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">T001</a></td>
+                            <td>Task 1</td>
+                            <td>John Doe</td>
+                            <td>Completed</td>
+                            <td>January 15, 2023</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#">T001</a></td>
+                            <td>Task 1</td>
+                            <td>John Doe</td>
+                            <td>Completed</td>
+                            <td>January 15, 2023</td>
+                        </tr>
+                        <!-- Add more tasks as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

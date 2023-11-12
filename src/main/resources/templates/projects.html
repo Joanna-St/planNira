@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Projects</title>
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/projects.css">
+</head>
+
+<body>
+    <!-- Navbar (Include your header or Thymeleaf fragment here) -->
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="card projects-card">
+            <h2>Projects</h2>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search by project name">
+                <button type="button">Search all Projects</button>
+            </div>
+
+            <!-- Projects Table -->
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Project Name</th>
+                        <th>Project Type</th>
+                        <th>Client</th>
+                        <th>Project Lead</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy Project 1 -->
+                    <tr>
+                        <td><a href="#">P001</a></td>
+                        <td>Project A</td>
+                        <td>Software Development</td>
+                        <td>Client X</td>
+                        <td>John Doe</td>
+                    </tr>
+
+                    <!-- Dummy Project 2 -->
+                    <tr>
+                        <td><a href="#">P002</a></td>
+                        <td>Project B</td>
+                        <td>Marketing Campaign</td>
+                        <td>Client Y</td>
+                        <td>Jane Smith</td>
+                    </tr>
+
+                    <!-- Dummy Project 3 -->
+                    <tr>
+                        <td><a href="#">P003</a></td>
+                        <td>Project C</td>
+                        <td>Research</td>
+                        <td>Client Z</td>
+                        <td>Bob Johnson</td>
+                    </tr>
+                    <!-- Add more projects as needed -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include any additional scripts or libraries if needed -->
+</body>
+
+</html>

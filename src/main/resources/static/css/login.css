@@ -1,0 +1,43 @@
+.login {
+    background-color: #cfcff3; /* Light navy blue background, matching the hero section */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 1em;
+}
+
+.login-content {
+    width: 50%; /* Set the width of the login form to 1/2 of the screen */
+    padding: 30px; /* Add spacing inside the form */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2); /* Add a box shadow for a card-like effect */
+    background-color: #fff; /* White background for the form */
+}
+
+.login h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-content .error{
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   Responsive Styles
+   ============================== */
+
+@media (max-width: 768px) {
+    .login-content {
+        width: 75%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .login-content {
+        width: 95%;
+    }
+}

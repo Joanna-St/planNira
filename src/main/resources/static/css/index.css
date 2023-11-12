@@ -1,0 +1,124 @@
+/* Style the Hero Section */
+.hero {
+    background-color: #cfcff3;
+    /* Light navy blue background */
+    padding: 30px 100px;
+    color: #333;
+    /* Text color */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    /* Larger font for the main title */
+    margin-bottom: 10px;
+    /* Add spacing below the title */
+    text-align: center;
+}
+
+/* Style the Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two cards on the first row */
+    grid-gap: 20px;
+}
+
+/* Style the third and fourth card for the second row and third row */
+.card:nth-child(3),
+.card:nth-child(4) {
+    grid-column: span 2;
+    /* Each spans two columns */
+}
+
+.hero p {
+    font-size: 1.2em;
+    /* Adjust font size for paragraphs */
+    line-height: 1.5;
+    /* Set line height for readability */
+    margin-bottom: 15px;
+    /* Add spacing between paragraphs */
+    text-align: center;
+}
+
+.hero a {
+    color: #0056b3;
+    /* Button text color */
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Larger font for buttons */
+}
+
+.hero ul {
+    padding: 0px;
+}
+
+.hero li {
+    font-size: 1.1em;
+    list-style: none;
+    /* Remove default bullet points */
+    padding-left: 0;
+    position: relative;
+    /* For positioning the pointing hand */
+    margin-left: 20px;
+    /* Add spacing between the pointing hand and the text */
+}
+
+.hero li::before {
+    content: "\261e";
+    /* Unicode character for pointing hand */
+    color: #0056b3;
+    /* Color for the pointing hand */
+    position: absolute;
+    left: -20px;
+    /* Adjust the distance between the hand and the text */
+}
+
+.hero p:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    /* Add lines between separate paragraphs */
+    padding-bottom: 15px;
+    /* Adjust the spacing below the lines */
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+        /* Single column layout on smaller screens */
+        grid-gap: 15px;
+        /* Reduce the gap between cards */
+    }
+
+    /* Style the third and fourth card for the second row and third row */
+    .card:nth-child(3),
+    .card:nth-child(4) {
+        grid-column: span 1;
+        /* Each spans two columns */
+    }
+
+    .hero h1 {
+        font-size: 2em;
+        /* Adjust the font size */
+    }
+
+    .hero p,
+    .hero li {
+        font-size: 1em;
+        /* Adjust the font size for paragraphs and list items */
+    }
+
+    .hero li {
+        margin: 0;
+    }
+
+    .hero li::before {
+        content: none;
+        position: relative;
+        left: 0px;
+        /* Adjust the distance between the hand and the text */
+    }
+}

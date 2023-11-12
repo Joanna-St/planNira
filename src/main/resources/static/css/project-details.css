@@ -1,0 +1,103 @@
+/* Main Section */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #cfcff3;
+    text-align: left;
+}
+
+.project-details-card {
+    align-items: stretch;
+}
+
+.card.project-details-card h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.client-section {
+    margin-top: 20px;
+}
+
+.client-info {
+    display: flex;
+    align-items: flex-end; /* Align items vertically */
+}
+
+.client-logo {
+    max-width: 100px; /* Adjust the max-width as needed */
+    margin-right: 10px; /* Add margin to separate the logo and name */
+}
+
+.client-name {
+    font-size: 1.2em; /* Adjust the font size for the client name */
+    line-height: 0.75;
+}
+
+.project-type-section,
+.status-section,
+.lead-section,
+.details-section,
+.dates-section,
+.tasks-section {
+    margin-top: 20px;
+}
+
+.hashtags {
+    display: flex;
+    margin-top: 10px;
+}
+
+.hashtag {
+    background-color: #dcdcf1;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.status-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.complete {
+    background-color: #5cb85c; /* Green color for completed status */
+    color: #fff;
+}
+
+.on-hold {
+    background-color: #f0ad4e; /* Orange color for on-hold status */
+    color: #fff;
+}
+
+.not-started {
+    background-color: #d9534f; /* Red color for not started status */
+    color: #fff;
+}
+
+/* Task Table Styles */
+
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: table;
+}
+
+.tasks-table th,
+.tasks-table td {
+    padding: 10px;
+    text-align: center;
+    border: none; /* Remove default borders */
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+.tasks-table th,
+.tasks-table tr:last-child {
+    border-bottom: 2px solid #ccc;
+}
