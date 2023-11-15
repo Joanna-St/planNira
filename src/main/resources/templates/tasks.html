@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Tasks</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/tasks.css">
+</head>
+
+<body>
+    <!-- Navbar (Include your header or Thymeleaf fragment here) -->
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="card tasks-card">
+            <h2>Tasks</h2>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search by task name">
+                <button type="button">Search all Tasks</button>
+            </div>
+
+            <!-- Tasks Table -->
+            <table class="tasks-table">
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Task Name</th>
+                        <th>Status</th>
+                        <th>Project Name</th>
+                        <th>Assignee</th>
+                        <th>Deadline</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy Task 1 -->
+                    <tr>
+                        <td><a href="#">Task-001</a></td>
+                        <td>Task 1</td>
+                        <td>In Progress</td>
+                        <td>Project A</td>
+                        <td>User Userov</td>
+                        <td>2023-12-15</td>
+                        <td>High</td>
+                    </tr>
+                    
+                    <!-- Dummy Task 2 -->
+                    <tr>
+                        <td><a href="#">Task-002</a></td>
+                        <td>Task 2</td>
+                        <td>Not Started</td>
+                        <td>Project B</td>
+                        <td>User 2</td>
+                        <td>2023-12-20</td>
+                        <td>Medium</td>
+                    </tr>
+                    
+                    <!-- Dummy Task 3 -->
+                    <tr>
+                        <td><a href="#">Task-003</a></td>
+                        <td>Task 3</td>
+                        <td>Completed</td>
+                        <td>Project A</td>
+                        <td>User 3</td>
+                        <td>2023-12-10</td>
+                        <td>Low</td>
+                    </tr>
+                    <!-- Add more tasks as needed -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include any additional scripts or libraries if needed -->
+</body>
+
+</html>
