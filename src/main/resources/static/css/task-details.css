@@ -21,7 +21,6 @@ main.content {
 
 .card.task-details-card h3 {
     font-size: 2em;
-    margin-bottom: 10px;
 }
 
 .assignee-section,
@@ -112,4 +111,15 @@ main.content {
     font-weight: bold;
 }
 
-/* You can add more styling as needed */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-task-button button {
+    background-color: #C63636;
+    font-size: 1em;
+    padding: 5px 10px;
+    height: 2em; /* Set the desired height for the button */
+}

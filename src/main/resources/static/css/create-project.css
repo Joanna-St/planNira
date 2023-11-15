@@ -18,7 +18,6 @@ main.content {
 /* Create Project Card */
 .card.project-details-card {
     align-items: stretch;
-    margin-top: 20px;
 }
 
 .card.project-details-card h3 {

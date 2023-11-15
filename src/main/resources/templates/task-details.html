@@ -22,13 +22,7 @@
                 <li><a href="#dashboard">Dashboard</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#tasks">Tasks</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Management</a>
-                    <div class="dropdown-content">
-                        <a href="#team">Team</a>
-                        <a href="#reports">Reports</a>
-                    </div>
-                </li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a th:href="@{/login}">Login</a></li>
                 <li><a th:href="@{/register}">Register</a></li>
                 <li>Welcome, User</li>
@@ -40,7 +34,13 @@
     <main class="content">
         <!-- Task Details Card -->
         <div class="card task-details-card">
-            <h3>Task Name</h3>
+            <div class="header-section">
+                <h3>Task Name</h3>
+                <!-- Edit Project Button -->
+                <div class="edit-task-button">
+                    <button type="button">Edit Task</button>
+                </div>
+            </div>
             <div class="assignee-section">
                 <h4>Assignee</h4>
                 <p>John Doe</p>

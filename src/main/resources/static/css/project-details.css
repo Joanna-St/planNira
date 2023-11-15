@@ -20,7 +20,6 @@ main.content {
 
 .card.project-details-card h3 {
     font-size: 2em;
-    margin-bottom: 10px;
 }
 
 .client-section {
@@ -89,4 +88,22 @@ main.content {
 .in-progress {
     background-color: #3396FF; /* Red color for not started status */
     color: #fff;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-project-button button,
+.create-task-button button {
+    background-color: #1c4b82;
+    font-size: 1em;
+    padding: 5px 10px;
+    height: 2em; /* Set the desired height for the button */
+}
+
+.edit-project-button button {
+    background-color: #C63636;
 }

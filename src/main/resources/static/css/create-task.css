@@ -1,4 +1,4 @@
-/* Add specific styles for the edit project page */
+/* Create Task Page Styles */
 
 body {
     display: flex;
@@ -13,14 +13,15 @@ main.content {
     padding: 20px;
     width: 100%;
     overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    justify-content: center;
 }
 
-/* Edit Project Card */
-.card.edit-project-card {
+/* Create Task Card */
+.card.task-details-card {
     align-items: stretch;
 }
 
-.card.edit-project-card h3 {
+.card.task-details-card h3 {
     font-size: 2em;
     margin-bottom: 10px;
 }

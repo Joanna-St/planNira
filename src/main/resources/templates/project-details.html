@@ -22,13 +22,7 @@
                 <li><a href="#dashboard">Dashboard</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#tasks">Tasks</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Management</a>
-                    <div class="dropdown-content">
-                        <a href="#team">Team</a>
-                        <a href="#reports">Reports</a>
-                    </div>
-                </li>
+                <li><a href="#clients">Clients</a></li>
                 <li><a th:href="@{/login}">Login</a></li>
                 <li><a th:href="@{/register}">Register</a></li>
                 <li>Welcome, User</li>
@@ -40,7 +34,13 @@
     <main class="content">
         <!-- Detailed Project Info Card -->
         <div class="card project-details-card">
-            <h3>Project Name</h3>
+            <div class="header-section">
+                <h3>Project Name</h3>
+                <!-- Edit Project Button -->
+                <div class="edit-project-button">
+                    <button type="button">Edit Project</button>
+                </div>
+            </div>
             <div class="client-section">
                 <h4>Client</h4>
                 <div class="client-info">
@@ -78,7 +78,14 @@
                 <p><strong>End Date:</strong> December 31, 2023</p>
             </div>
             <div class="tasks-section">
-                <h4>Project Tasks</h4>
+                
+                <div class="header-section">
+                    <h4>Project Tasks</h4>
+                    <!-- Create Task Button -->
+                    <div class="create-task-button">
+                        <button type="button">Create Task</button>
+                    </div>
+                </div>
                 <table class="tasks-table">
                     <thead>
                         <tr>

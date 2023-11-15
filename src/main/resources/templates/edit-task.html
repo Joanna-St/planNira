@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Edit Task</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/edit-task.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Edit Task Card -->
+        <div class="card task-details-card">
+            <h3>Create a New Task</h3>
+
+            <form th:action="@{/editTask}" method="post" enctype="multipart/form-data">
+                <!-- Task Name -->
+                <div class="form-group">
+                    <label for="taskName">Task Name</label>
+                    <input type="text" id="taskName" name="taskName" required>
+                </div>
+
+                <!-- Assignee Section -->
+                <div class="form-group">
+                    <label for="assignee">Assignee</label>
+                    <select id="assignee" name="assignee" required>
+                        <option value="">--Select assignee--</option>
+                        <option value="johnDoe">John Doe</option>
+                        <option value="janeSmith">Jane Smith</option>
+                        <!-- Add more assignees as needed -->
+                    </select>
+                </div>
+
+                <!-- Task Status Section -->
+                <div class="form-group">
+                    <label for="taskStatus">Task Status</label>
+                    <select id="taskStatus" name="taskStatus" required>
+                        <option value="">--Select task status--</option>
+                        <option value="complete">Complete</option>
+                        <option value="onHold">On Hold</option>
+                        <option value="notStarted">Not Started</option>
+                        <option value="inProgress">In Progress</option>
+                        <!-- Add more status options as needed -->
+                    </select>
+                </div>
+
+                <!-- Deadline Section -->
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline" name="deadline" required>
+                </div>
+
+                <!-- Task Details Section -->
+                <div class="form-group">
+                    <label for="taskDetails">Task Details</label>
+                    <textarea id="taskDetails" name="taskDetails" rows="4" required></textarea>
+                </div>
+
+                <!-- Project Section -->
+                <div class="form-group">
+                    <label for="project">Project</label>
+                    <select id="project" name="project" required>
+                        <option value="">--Select project--</option>
+                        <option value="projectA">Project A</option>
+                        <option value="projectB">Project B</option>
+                        <!-- Add more projects as needed -->
+                    </select>
+                </div>
+
+                <!-- Priority Section -->
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" name="priority" required>
+                        <option value="">--Select priority--</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Update Task</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
