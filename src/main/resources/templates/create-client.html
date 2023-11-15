@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Create Client</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/create-client.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Create Client Card -->
+        <div class="card client-details-card">
+            <h3>Create a New Client</h3>
+
+            <form th:action="@{/createClient}" method="post">
+                <!-- Client Name -->
+                <div class="form-group">
+                    <label for="clientName">Client Name</label>
+                    <input type="text" id="clientName" name="clientName" required>
+                </div>
+
+                <!-- Client Logo -->
+                <div class="form-group">
+                    <label for="clientLogo">Client Logo URL</label>
+                    <input type="url" id="clientLogo" name="clientLogo" placeholder="https://example.com/logo.png" required>
+                </div>
+
+                <!-- Client Status -->
+                <div class="form-group">
+                    <label for="clientStatus">Client Status</label>
+                    <select id="clientStatus" name="clientStatus" required>
+                        <option value="">--Select client status--</option>
+                        <option value="bronze">Bronze</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="platinum">Platinum</option>
+                        <!-- Add more status options as needed -->
+                    </select>
+                </div>
+
+                <!-- Client Category -->
+                <div class="form-group">
+                    <label for="clientCategory">Client Category</label>
+                    <select id="clientCategory" name="clientCategory" required>
+                        <option value="">--Select client category--</option>
+                        <option value="banking">Banking</option>
+                        <option value="healthcare">Healthcare and Pharmacy</option>
+                        <option value="it">IT</option>
+                        <option value="legal">Legal</option>
+                        <option value="ngo">NGO</option>
+                        <option value="publicSector">Public Sector</option>
+                        <option value="retail">Retail</option>
+                        <!-- Add more categories as needed -->
+                    </select>
+                </div>
+
+                <!-- Client Country -->
+                <div class="form-group">
+                    <label for="clientCountry">Client Country</label>
+                    <select id="clientCountry" name="clientCountry" required>
+                        <option value="">--Select client country--</option>
+                    </select>
+                </div>
+
+                <!-- Contact Person Name -->
+                <div class="form-group">
+                    <label for="contactPersonName">Contact Person Name</label>
+                    <input type="text" id="contactPersonName" name="contactPersonName" required>
+                </div>
+
+                <!-- Contact Person Email -->
+                <div class="form-group">
+                    <label for="contactPersonEmail">Contact Person Email</label>
+                    <input type="email" id="contactPersonEmail" name="contactPersonEmail" required>
+                </div>
+
+                <!-- Contact Person Phone -->
+                <div class="form-group">
+                    <label for="contactPersonPhone">Contact Person Phone</label>
+                    <input type="tel" id="contactPersonPhone" name="contactPersonPhone" required>
+                </div>
+
+                <!-- Additional Contacts -->
+                <div class="form-group">
+                    <label for="additionalContact1Name">Additional Contact Name</label>
+                    <input type="text" id="additionalContact1Name" name="additionalContact1Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalContact1Email">Additional Contact Email</label>
+                    <input type="email" id="additionalContact1Email" name="additionalContact1Email">
+                </div>
+
+                <!-- Additional Contacts -->
+                <div class="form-group">
+                    <label for="additionalContact1Name">Additional Contact 2 Name</label>
+                    <input type="text" id="additionalContact2Name" name="additionalContact2Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalContact1Email">Additional Contact 2 Email</label>
+                    <input type="email" id="additionalContact2Email" name="additionalContact2Email">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Create Client</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

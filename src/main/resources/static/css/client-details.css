@@ -1,0 +1,95 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    background-color: #cfcff3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    justify-content: center;
+}
+
+/* Client Details Card Styles */
+.card.client-details-card {
+    align-items: stretch;
+}
+
+.card.client-details-card h3 {
+    font-size: 2em;
+}
+
+.status-section,
+.category-section,
+.country-section,
+.contact-section,
+.contact-info-section,
+.additional-contacts-section,
+.projects-section {
+    margin-top: 20px;
+}
+
+/* Status Item Styles */
+.status-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.bronze {
+    background-color: #cd7f32;
+    color: #fff;
+}
+
+.silver {
+    background-color: #c0c0c0;
+    color: #fff;
+}
+
+.gold {
+    background-color: #d4af37;
+    color: #fff;
+}
+
+.platinum {
+    background-color: #e5e4e2;
+    color: #333;
+}
+
+/* Projects Table Styles */
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.projects-table th,
+.projects-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-client-button button,
+.create-project-button button {
+    background-color: #1c4b82;
+    font-size: 1em;
+    padding: 5px 10px;
+    height: 2em; /* Set the desired height for the button */
+}
+
+.edit-client-button button {
+    background-color: #C63636;
+}

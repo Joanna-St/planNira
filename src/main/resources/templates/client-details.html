@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Client Details</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/client-details.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Detailed Client Info Card -->
+        <div class="card client-details-card">
+            <div class="header-section">
+                <h3>Client Name</h3>
+                <!-- Edit Client Button -->
+                <div class="edit-client-button">
+                    <button type="button">Edit Client</button>
+                </div>
+            </div>
+            <div class="client-section">
+                <img src="https://via.placeholder.com/100" alt="Client Logo" class="client-logo">
+            </div>
+            <div class="status-section">
+                <h4>Client Status</h4>
+                <div class="status-item bronze">Bronze</div>
+                <div class="status-item silver">Silver</div>
+                <div class="status-item gold">Gold</div>
+                <div class="status-item platinum">Platinum</div>
+                <!-- Add more status items as needed -->
+            </div>
+            <div class="category-section">
+                <h4>Category</h4>
+                <p>IT</p>
+            </div>
+            <div class="country-section">
+                <h4>Country</h4>
+                <p>United States</p>
+            </div>
+            <div class="contact-section">
+                <h4>Contact Person</h4>
+                <p>John Doe</p>
+            </div>
+            <div class="contact-info-section">
+                <h4>Contact Information</h4>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            </div>
+            <div class="additional-contacts-section">
+                <h4>Additional Contacts</h4>
+                <p><strong>Contact 1:</strong> Jane Smith (jane.smith@example.com)</p>
+                <p><strong>Contact 2:</strong> Mark Johnson (mark.johnson@example.com)</p>
+                <!-- Add more additional contacts as needed -->
+            </div>
+            <div class="projects-section">
+                <div class="header-section">
+                    <h4>Client Projects</h4>
+                    <!-- Create Project Button -->
+                    <div class="create-project-button">
+                        <button type="button">Create Project</button>
+                    </div>
+                </div>
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Project Name</th>
+                            <th>Project Type</th>
+                            <th>Project Status</th>
+                            <th>Deadline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="#">P001</a></td>
+                            <td>Project A</td>
+                            <td>Software Development</td>
+                            <td>On Hold</td>
+                            <td>2023-12-25</td>
+                        </tr>
+                        <!-- Add more projects as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

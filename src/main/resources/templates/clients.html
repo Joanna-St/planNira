@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Clients</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/clients.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Clients Card -->
+        <div class="card clients-card">
+            <h2>Clients</h2>
+
+            <!-- Search Bar and Create New Client Button -->
+            <div class="search-and-create">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by client name">
+                    <button type="button">Search all Clients</button>
+                </div>
+                <button class="create-client-btn" type="button">Create Client</button>
+            </div>
+
+            <!-- Clients Table -->
+            <table class="clients-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Client Name</th>
+                        <th>Contact Person</th>
+                        <th>Category</th>
+                        <th>Projects Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy Client 1 -->
+                    <tr>
+                        <td><a href="#">C001</a></td>
+                        <td>Client A</td>
+                        <td>John Doe</td>
+                        <td>Gold</td>
+                        <td>3</td>
+                    </tr>
+
+                    <!-- Dummy Client 2 -->
+                    <tr>
+                        <td><a href="#">C002</a></td>
+                        <td>Client B</td>
+                        <td>Jane Smith</td>
+                        <td>Silver</td>
+                        <td>5</td>
+                    </tr>
+
+                    <!-- Dummy Client 3 -->
+                    <tr>
+                        <td><a href="#">C003</a></td>
+                        <td>Client C</td>
+                        <td>Mark Johnson</td>
+                        <td>Bronze</td>
+                        <td>2</td>
+                    </tr>
+                    <!-- Add more clients as needed -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

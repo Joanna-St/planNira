@@ -1,0 +1,59 @@
+/* Clients Page Styles */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    background-color: #cfcff3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
+/* Clients Card */
+.card.clients-card {
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.card.clients-card h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Search Bar and Create New Client Button */
+.search-and-create {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex; /* Adjusted to a flex layout */
+    align-items: center; /* Align items vertically */
+    align-self: start;
+}
+
+.search-bar input {
+    flex: 1;
+    height: 2em; /* Set the desired height for the input */
+}
+
+.search-bar button {
+    font-size: 1em;
+    padding: 2px;
+    height: 2em; /* Set the same height for the button */
+    margin-left: 10px; /* Add some space between the input and button */
+}
+
+.create-client-btn {
+    background-color: #1c4b82;
+    font-size: 1em;
+    padding: 5px 10px;
+    height: 2em; /* Set the desired height for the button */
+}
