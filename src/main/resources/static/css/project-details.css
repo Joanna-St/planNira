@@ -1,11 +1,17 @@
-/* Main Section */
-.content {
+body {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    padding: 20px; /* Add padding for better spacing */
+}
+
+main.content {
     background-color: #cfcff3;
-    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    justify-content: center;
 }
 
 .project-details-card {

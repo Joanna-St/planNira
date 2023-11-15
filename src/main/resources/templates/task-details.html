@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Task Details</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/task-details.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Task Details Card -->
+        <div class="card task-details-card">
+            <h3>Task Name</h3>
+            <div class="assignee-section">
+                <h4>Assignee</h4>
+                <p>John Doe</p>
+            </div>
+            <div class="status-section">
+                <h4>Task Status</h4>
+                <div class="status-item complete">Complete</div>
+                <div class="status-item in-progress">In Progress</div>
+                <div class="status-item not-started">Not Started</div>
+            </div>
+            <div class="deadline-section">
+                <h4>Deadline</h4>
+                <p>January 15, 2023</p>
+            </div>
+            <div class="details-section">
+                <h4>Task Details</h4>
+                <p>Task Description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla...</p>
+            </div>
+            <div class="project-link-section">
+                <h4>Related Project</h4>
+                <p><a href="#">Project X</a></p>
+            </div>
+            <div class="priority-section">
+                <h4>Task Priority</h4>
+                <p class="priority-item high-priority">High</p>
+            </div>
+            <div class="created-by-section">
+                <h4>Created By</h4>
+                <p>Jane Doe</p>
+            </div>
+            <div class="timeline-section">
+                <h4>Task Timeline</h4>
+                <ul class="timeline">
+                    <li class="timeline-item">
+                        <p>Task created - January 5, 2023</p>
+                    </li>
+                    <li class="timeline-item">
+                        <p>Task assigned to John Doe - January 6, 2023</p>
+                    </li>
+                    <!-- Add more timeline items as needed -->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

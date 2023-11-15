@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    background-color: #cfcff3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    justify-content: center;
+}
+
+/* Task Details Card */
+.card.task-details-card {
+    align-items: stretch;
+}
+
+.card.task-details-card h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.assignee-section,
+.status-section,
+.deadline-section,
+.details-section,
+.project-link-section,
+.priority-section,
+.created-by-section,
+.timeline-section {
+    margin-top: 20px;
+}
+
+.status-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.complete {
+    background-color: #5cb85c; /* Green color for completed status */
+    color: #fff;
+}
+
+.in-progress {
+    background-color: #3396FF; /* Blue color for in-progress status */
+    color: #fff;
+}
+
+.not-started {
+    background-color: #d9534f; /* Red color for not started status */
+    color: #fff;
+}
+
+.priority-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.high-priority {
+    background-color: #FF3333; /* Red color for high priority */
+    color: #fff;
+}
+
+.medium-priority {
+    background-color: #FFA500; /* Orange color for medium priority */
+    color: #fff;
+}
+
+.low-priority {
+    background-color: #FFFF00; /* Yellow color for low priority */
+    color: #000; /* Black text for better visibility on yellow */
+}
+
+.priority-section p {
+    font-weight: bold;
+}
+
+.timeline {
+    list-style-type: none; /* Remove default list style */
+    padding-left: 0; /* Remove default padding */
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px; /* Adjust the left padding to make space for the bullet */
+}
+
+.timeline-item::before {
+    content: "\2022"; /* Bullet character */
+    color: #333; /* Bullet color */
+    font-size: 1.5em; /* Adjust the bullet size */
+    position: absolute;
+    left: 0;
+    top: 50%; /* Center the bullet vertically */
+    transform: translateY(-50%);
+    margin-right: 5px; /* Adjust the space between the bullet and text */
+}
+
+.project-link-section a {
+    color: #0056b3; /* Adjust link color */
+    font-weight: bold;
+}
+
+/* You can add more styling as needed */

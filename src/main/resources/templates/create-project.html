@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PlanNira - Create Project</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/fixed-styles.css" />
+    <link rel="stylesheet" href="../static/css/create-project.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tasks">Tasks</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Management</a>
+                    <div class="dropdown-content">
+                        <a href="#team">Team</a>
+                        <a href="#reports">Reports</a>
+                    </div>
+                </li>
+                <li><a th:href="@{/login}">Login</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li>Welcome, User</li>
+                <li><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Detailed Project Info Card -->
+        <div class="card project-details-card">
+            <h3>Create a New Project</h3>
+
+            <form th:action="@{/createProject}" method="post" enctype="multipart/form-data">
+                <!-- Project Name -->
+                <div class="form-group">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" name="projectName" required>
+                </div>
+
+                <!-- Client Section -->
+                <div class="form-group">
+                    <label for="client">Client</label>
+                    <select id="client" name="client" required>
+                        <option value="">--Select client--</option>
+                        <option value="clientA">Client A</option>
+                        <option value="clientB">Client B</option>
+                        <!-- Add more clients as needed -->
+                    </select>
+                </div>
+
+                <!-- Project Type Section -->
+                <div class="form-group">
+                    <label for="projectType">Project Type</label>
+                    <select id="projectType" name="projectType" required>
+                        <option value="">--Select project type--</option>
+                        <option value="softwareDevelopment">Software Development</option>
+                        <option value="marketingCampaign">Marketing Campaign</option>
+                        <!-- Add more project types as needed -->
+                    </select>
+                </div>
+
+                <!-- Project Lead Section -->
+                <div class="form-group">
+                    <label for="projectLead">Project Lead</label>
+                    <select id="projectLead" name="projectLead" required>
+                        <option value="">--Select project lead--</option>
+                        <option value="johnDoe">John Doe</option>
+                        <option value="janeSmith">Jane Smith</option>
+                        <!-- Add more project leads as needed -->
+                    </select>
+                </div>
+
+                <!-- Project Details Section -->
+                <div class="form-group">
+                    <label for="projectDescription">Project Details</label>
+                    <textarea id="projectDescription" name="projectDescription" rows="4" required></textarea>
+                </div>
+
+                <!-- Project Dates Section -->
+                <div class="form-group">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate" required>
+                    <br>
+                    <label for="endDate">End Date:</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit">Create Project</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
+            </div>
+            <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

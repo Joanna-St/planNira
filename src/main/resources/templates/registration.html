@@ -67,16 +67,17 @@
                     <span class="error" th:if="${#fields.hasErrors('repeatPassword')}" th:errors="*{repeatPassword}">Error message</span>
                 </div>
                 <div class="form-group">
-                    <label for="team">Team</label>
-                    <select id="team" name="team" th:field="*{team}" required>
-                        <option value="">--Select team--</option>
-                        <option value="projectManagement">Project Management</option>
-                        <option value="dataProcessing">Data Processing</option>
-                        <option value="scripting">Scripting</option>
-                        <option value="research">Research</option>
-                        <option value="qa">QA</option>
+                    <label for="role">Role</label>
+                    <select id="role" name="role" th:field="*{role}" required>
+                        <option value="">--Select role--</option>
+                        <option value="dp_team_manager">DP Team Manager</option>
+                        <option value="sw_team_manager">SW Team Manager</option>
+                        <option value="project_manager">Project Manager</option>
+                        <option value="data_processing_executive">Data Processing Executive</option>
+                        <option value="senior_survey_developer">Senior Survey Developer</option>
+                        <option value="quality_assurance_expert">Quality Assurance Expert</option>
                     </select>
-                    <span class="error" th:if="${#fields.hasErrors('team')}" th:errors="*{team}">Error message</span>
+                    <span class="error" th:if="${#fields.hasErrors('role')}" th:errors="*{role}">Error message</span>
                 </div>
                 <button type="submit">Register</button>
             </form>
