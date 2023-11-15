@@ -1,3 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    background-color: #cfcff3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+    justify-content: center;
+}
+
+
 /* Style the Hero Section */
 .hero {
     background-color: #cfcff3;
@@ -28,14 +45,13 @@
 .card:nth-child(4) {
     grid-column: span 2;
     /* Each spans two columns */
+    grid-row: span 10;
 }
 
 .hero p {
     font-size: 1.2em;
     /* Adjust font size for paragraphs */
     line-height: 1.5;
-    /* Set line height for readability */
-    margin-bottom: 15px;
     /* Add spacing between paragraphs */
     text-align: center;
 }
@@ -71,13 +87,6 @@
     position: absolute;
     left: -20px;
     /* Adjust the distance between the hand and the text */
-}
-
-.hero p:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-    /* Add lines between separate paragraphs */
-    padding-bottom: 15px;
-    /* Adjust the spacing below the lines */
 }
 
 @media (max-width: 768px) {
@@ -116,9 +125,7 @@
     }
 
     .hero li::before {
-        content: none;
         position: relative;
-        left: 0px;
-        /* Adjust the distance between the hand and the text */
+        left: -5px;
     }
 }

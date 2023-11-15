@@ -250,6 +250,40 @@ button:hover {
 
 
 /* ==============================
+   Table base layout
+   ============================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Adjust the margin as needed */
+    display: table;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: none; /* Remove default borders */
+    white-space: nowrap; /* Prevent text wrapping in table cells */
+}
+
+th, tr:last-child{
+    border-bottom: 2px solid #ccc; /* Add a bottom border to header row */
+}
+
+/* Link styles for Task ID */
+td a {
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+
+   /* ==============================
    Responsive Styles
    ============================== */
 
@@ -271,6 +305,11 @@ button:hover {
     footer p {
         font-size: 0.8em; /* Adjust font size for the copyright text */
     }
+
+    th, td {
+        font-size: 14px; /* Adjust the font size as needed for smaller screens */
+    }
+
 }
 
 @media (max-width: 630px) {

@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>PlanNira - Project Management</title>
+    <title>
+        PlanNira - Project Management Tool
+    </title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/fixed-styles.css" />
     <link rel="stylesheet" href="../static/css/index.css" />
 </head>
+
 <body>
     <!-- Navbar -->
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tasks">Tasks</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Management</a>
+                        <div class="dropdown-content">
+                            <a href="#team">Team</a>
+                            <a href="#reports">Reports</a>
+                        </div>
+                    </li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                    <li><a th:href="@{/register}">Register</a></li>
+                    <li>Welcome, User</li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#tasks">Tasks</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Management</a>
-                    <div class="dropdown-content">
-                        <a href="#team">Team</a>
-                        <a href="#reports">Reports</a>
-                    </div>
-                </li>
-                <li><a th:href="@{/login}">Login</a></li>
-                <li><a th:href="@{/register}">Register</a></li>
-                <li>Welcome, User</li>
-                <li><a th:href="@{/logout}">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to PlanNira: Your Ultimate Project Management Solution</h1>
-            <div class="card-grid">
-                <div class="card">
-                    <p>At PlanNira, we believe that every project, no matter how big or small, deserves a well-organized and efficient management approach. Our mission is to simplify project coordination, boost teamwork, and help you achieve your goals with ease.</p>
-                </div>
-                <div class="card">
-                    <h2>Key Features of PlanNira:</h2>
-                    <ul>
-                        <li>Create and manage projects effortlessly.</li>
-                        <li>Assign tasks and track progress seamlessly.</li>
-                        <li>Collaborate with your team in real-time.</li>
-                        <li>Stay updated with task notifications.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <p>With PlanNira, you'll be on top of every project, and your team will be a well-oiled machine. Say goodbye to project management hassles and welcome a new era of productivity and success!</p>
-                </div>
-                <div class="card">
-                    <p><a th:href="@{/login}">Login</a> if you have an account or <a th:href="@{/register}">Register now</a> to start your PlanNira experience!</p>
-                </div>
+    <main class="hero content">
+        <h1>Welcome to PlanNira: Your Ultimate Project Management Solution</h1>
+        <div class="card-grid">
+            <div class="card">
+                <p>At PlanNira, we believe that every project, no matter how big or small, deserves a well-organized
+                    and efficient management approach. Our mission is to simplify project coordination, boost
+                    teamwork, and help you achieve your goals with ease.</p>
+            </div>
+            <div class="card">
+                <h2>Key Features of PlanNira:</h2>
+                <ul>
+                    <li>Create and manage projects effortlessly.</li>
+                    <li>Assign tasks and track progress seamlessly.</li>
+                    <li>Collaborate with your team in real-time.</li>
+                    <li>Stay updated with task notifications.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <p>With PlanNira, you'll be on top of every project, and your team will be a well-oiled machine. Say
+                    goodbye to project management hassles and welcome a new era of productivity and success!</p>
+            </div>
+            <div class="card">
+                <p><a th:href="@{/login}">Login</a> if you have an account or <a th:href="@{/register}">Register
+                        now</a> to start your PlanNira experience!</p>
             </div>
         </div>
-    </section>
-
-
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="../static/images/logo.png" alt="PlanNira Logo"  class="footer-logo">
+                <img src="../static/images/logo.png" alt="PlanNira Logo" class="footer-logo">
             </div>
             <p>&copy; 2023 PlanNira. All Rights Reserved.</p>
         </div>
     </footer>
 </body>
+
 </html>

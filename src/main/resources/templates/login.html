@@ -4,37 +4,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>PlanNira - Login</title>
+    <link rel="icon" href="../static/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../static/css/fixed-styles.css" />
     <link rel="stylesheet" href="../static/css/login.css" />
 </head>
 <body>
     <!-- Navbar -->
-    <nav>
-        <div class="navbar">
-            <div class="logo">
-                <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../static/images/logo.png" alt="PlanNira Logo" class="header-logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tasks">Tasks</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)">Management</a>
+                        <div class="dropdown-content">
+                            <a href="#team">Team</a>
+                            <a href="#reports">Reports</a>
+                        </div>
+                    </li>
+                    <li><a th:href="@{/login}">Login</a></li>
+                    <li><a th:href="@{/register}">Register</a></li>
+                    <li>Welcome, User</li>
+                    <li><a th:href="@{/logout}">Logout</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#tasks">Tasks</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Management</a>
-                    <div class="dropdown-content">
-                        <a href="#team">Team</a>
-                        <a href="#reports">Reports</a>
-                    </div>
-                </li>
-                <li><a th:href="@{/login}">Login</a></li>
-                <li><a th:href="@{/register}">Register</a></li>
-                <li>Welcome, User</li>
-                <li><a th:href="@{/logout}">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Login Form -->
-    <section class="login">
+    <main class="login content">
         <div class="login-content">
             <h2>Login to Your PlanNira Account</h2>
             <form th:action="@{/login}" method="post" th:object="${loginForm}">
@@ -50,7 +53,7 @@
                 <button type="submit">Login</button>
             </form>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer>

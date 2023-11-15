@@ -29,27 +29,6 @@ main.content {
     margin-bottom: 10px; /* Add some space below the heading */
 }
 
-
-/* Projects Table */
-.projects-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px; /* Adjust the margin as needed */
-    display: table;
-}
-
-.projects-table th,
-.projects-table td {
-    padding: 10px;
-    text-align: center;
-    border: none; /* Remove default borders */
-    white-space: nowrap; /* Prevent text wrapping in table cells */
-}
-
-.projects-table th, .projects-table tr:last-child{
-    border-bottom: 2px solid #ccc; /* Add a bottom border to header row */
-}
-
 /* Search Bar */
 .search-bar {
     display: flex; /* Adjusted to a flex layout */
@@ -67,12 +46,4 @@ main.content {
     padding: 2px;
     height: 2em; /* Set the same height for the button */
     margin-left: 10px; /* Add some space between the input and button */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .projects-table th,
-    .projects-table td {
-        font-size: 14px; /* Adjust the font size as needed for smaller screens */
-    }
 }

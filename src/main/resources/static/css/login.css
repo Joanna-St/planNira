@@ -1,3 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main.content {
+    background-color: #cfcff3;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Adjusted to a column layout */
+    padding: 20px;
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+}
+
 .login {
     background-color: #cfcff3; /* Light navy blue background, matching the hero section */
     display: flex;
